@@ -284,7 +284,7 @@ for (const v of ['a', 'b']) {
     const links = nav.map(([k, l]) => `<a href="${k}.html"${k === key ? ' class="on"' : ''}>${l}</a>`).join('');
     writeFileSync(`${out}/${v}/${key}.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${p.title} | Local Vending KC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=${themes[v].font}&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="wrap"><a class="logoT" href="index.html">Local Vending <b>KC</b></a><nav>${links}</nav></div></header>
+<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav>${links}</nav></div></header>
 <main>${p.body(v)}</main>
 <footer><div class="wrap">© Local Vending KC · Kansas City, MO · Draft for review</div></footer></body></html>`);
   }
