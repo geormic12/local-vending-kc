@@ -5,7 +5,88 @@ const out = process.argv[2];
 // Placeholders are wrapped in <mark class="ph"> so they are easy to spot and replace.
 const ph = (t) => `<mark class="ph">[${t}]</mark>`;
 
+// Real content from Heidi's emails (Sep 23 - Oct 25 2026). Lease/purchase/funding details are deliberately left out.
+const letters = [
+  ['L', 'Local, Fresh, Better Together'],
+  ['O', 'Good Food, Brighter KC'],
+  ['V', 'Organic, Local, Delicious'],
+  ['E', 'Fuel a Kinder KC'],
+  ['K', 'Kansas City Grown'],
+  ['C', 'Healthier Community, Happier KC'],
+];
+const lovekc = `<div class="lovekc" aria-label="LOVE KC">${letters.map(([l, t]) => `<button type="button" class="ltr"><span class="l">${l}</span><span class="tip">${t}</span></button>`).join('')}</div>`;
+
 const pages = {
+  index: {
+    title: 'Local Vending KC',
+    body: (v) => `
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">Kansas City</p>
+  <h1>${v === 'a' ? 'Good food, close to home.' : 'Vending, rebuilt for Kansas City.'}</h1>
+  ${lovekc}
+  <p class="lead">Local Vending KC puts fresh, local, organic food and drink where Kansas City already is: coffee shops, luxury apartments and other prime locations. Hover a letter to see what we stand for.</p>
+  <p><a class="btn" href="brands.html">See the brands</a> <a class="btn ghost" href="bio.html">Meet Heidi</a></p>
+</div></section>
+<section><div class="wrap">
+  <h2>What is Local Vending?</h2>
+  <p>Local Vending KC is a vendor, retailer, wholesaler and co-packer. We make and distribute a family of more than five food and drink brands, and we place them in vending machines across the city. Each location carries its own city letters after the name, <em>Local Vending (KC)</em>, so every market is truly local.</p>
+  <div class="cards">
+    <article><h3>Vend</h3><p>Fresh ready-made food and drinks in machines placed in coffee shops, luxury apartments and other high-traffic spots.</p></article>
+    <article><h3>Make</h3><p>Sauces, milks and waffles produced for wholesale and retail, and co-packed for our brands.</p></article>
+    <article><h3>Serve</h3><p>The Moloko Milk Bar: coolers of sandwiches, sides, fresh juices, fruit milks and herbal-infused milks, plus soft serve.</p></article>
+  </div>
+</div></section>
+<section class="alt"><div class="wrap">
+  <h2>Where we're headed</h2>
+  <ol class="steps"><li><strong>Start:</strong> new vending accounts in Kansas City coffee shops.</li>
+  <li><strong>Next:</strong> a walk-up space for ready-made sandwiches, drinks and frozen pints. No seating.</li>
+  <li><strong>Then:</strong> manufacturing sauces, milks and waffles for wholesale and retail, sold through our machines too.</li></ol>
+  <p>Opening-day favorite: an Ice Cream Sunday every week, with fresh-baked organic bread, pizza, sandwiches, soft serve and toppings.</p>
+  <h2>Partner with us</h2>
+  <p>Host a machine, carry a brand or co-pack with us. <a href="bio.html#contact">Get in touch</a>.</p>
+</div></section>`,
+  },
+  bio: {
+    title: 'About Heidi',
+    body: () => `
+<section class="hero small"><div class="wrap">
+  <p class="eyebrow">About</p><h1>Heidi Van Pelt</h1>
+  <p class="lead">Founder of Local Vending KC and creator of more than five food and drink brands.</p>
+</div></section>
+<section><div class="wrap two">
+  <div class="photo">${ph('Headshot')}</div>
+  <div>
+    <h2>Background</h2>
+    <p>Heidi is building a Kansas City food company around one idea: good food that is local, organic and easy to grab. She is the founder behind Local Vending KC, LLC and the Moloko Milk Bar, and she develops and co-packs her own brands.</p>
+    <p>${ph('Add Heidi’s own story in a few sentences')}</p>
+    <h2>Experience</h2>
+    <ul><li>${ph('Role / company / years')}</li><li>${ph('Role / company / years')}</li><li>${ph('Role / company / years')}</li></ul>
+  </div>
+</div></section>
+<section class="alt" id="contact"><div class="wrap">
+  <h2>Get in touch</h2>
+  <p>For machine placement, wholesale, co-packing or press:</p>
+  <ul class="plain"><li>Email: <a href="mailto:heidivanpelt@protonmail.com">heidivanpelt@protonmail.com</a></li><li>Phone: ${ph('phone')}</li><li>Social: ${ph('links')}</li></ul>
+</div></section>`,
+  },
+  brands: {
+    title: 'Our Brands',
+    body: () => `
+<section class="hero small"><div class="wrap">
+  <p class="eyebrow">Brands</p><h1>The brands behind the machines</h1>
+  <p class="lead">Heidi's family of more than five brands, made, co-packed and distributed through Local Vending KC.</p>
+</div></section>
+<section><div class="wrap"><div class="cards three">
+  <article><div class="logo">${ph('Moloko Milk Bar logo')}</div><h3>Moloko Milk Bar</h3><p>A public milk bar with retail coolers of sandwiches, sides, fresh juices, fruit milks and herbal-infused milks, plus soft serve and snacks.</p></article>
+  <article><div class="logo">${ph('LOVEKC logo')}</div><h3>Local Vending KC · FüD Factory</h3><p>The vending, wholesale and co-packing arm: sauces, milks and waffles, distributed to machines and retailers across Kansas City.</p></article>
+  <article><div class="logo">${ph('Logo')}</div><h3>${ph('Brand name')}</h3><p>${ph('Description')}</p></article>
+  <article><div class="logo">${ph('Logo')}</div><h3>${ph('Brand name')}</h3><p>${ph('Description')}</p></article>
+  <article><div class="logo">${ph('Logo')}</div><h3>${ph('Brand name')}</h3><p>${ph('Description')}</p></article>
+</div></div></section>`,
+  },
+};
+
+const oldPages = {
   index: {
     title: 'Local Vending KC',
     body: (v) => `
@@ -93,6 +174,11 @@ article{background:var(--card);padding:24px;border-radius:12px;border:1px solid 
 .photo{min-height:320px}.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:36px}
 @media(max-width:700px){.two{grid-template-columns:1fr}}
 .plain{list-style:none;padding:0}.ph{background:#ffe27a;color:#4a3b00;padding:0 4px;border-radius:3px;font-size:.92em}
+.lovekc{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.ltr{position:relative;width:84px;height:84px;border:2px solid var(--accent);border-radius:14px;background:var(--card);color:var(--accent);font:inherit;font-size:2.6rem;font-weight:800;cursor:pointer;padding:0;display:grid;place-items:center}
+.ltr .tip{position:absolute;inset:0;background:#fff;color:#000;border-radius:14px;font-size:.78rem;font-weight:600;line-height:1.2;padding:8px;display:none;place-items:center;text-align:center}
+.ltr .tip{background:#fff}.ltr:hover .tip,.ltr:focus .tip{display:grid}.ltr:hover .l,.ltr:focus .l{visibility:hidden}
+.steps{padding-left:1.2em}
 footer{padding:32px 0;text-align:center;opacity:.7;font-size:.9rem}`;
 
 const nav = [['index', 'Local Vending'], ['bio', 'About Heidi'], ['brands', 'Brands']];
@@ -104,7 +190,7 @@ for (const v of ['a', 'b']) {
     writeFileSync(`${out}/${v}/${key}.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${p.title} | Local Vending KC</title><link rel="stylesheet" href="style.css"></head><body>
 <header><div class="wrap"><strong>Local Vending KC</strong><nav>${links}</nav></div></header>
 <main>${p.body(v)}</main>
-<footer><div class="wrap">© Local Vending KC · Kansas City, MO · Draft with placeholder content</div></footer></body></html>`);
+<footer><div class="wrap">© Local Vending KC · Kansas City, MO · Draft for review</div></footer></body></html>`);
   }
 }
 writeFileSync(`${out}/index.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local Vending KC: Site Options</title>
