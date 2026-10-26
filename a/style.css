@@ -57,5 +57,13 @@ section{padding:60px 0}.band{background:var(--band)}.cta{background:var(--a3)}
 .logo,.photo{background:#fff8;border:3px dashed var(--ink);display:grid;place-items:center;min-height:120px;border-radius:var(--r2);margin-bottom:14px;text-align:center}.photo{min-height:340px}
 .ticks{list-style:none;padding:0}.ticks li:before{content:"✔ ";color:var(--a1);font-weight:800}
 .ph{background:#ffe27a;color:#4a3b00;padding:0 4px;border-radius:3px;font-size:.92em}
+.poster{display:block;max-width:360px;width:100%;height:auto;margin:auto;border:var(--bw) solid var(--ink);border-radius:var(--r2);box-shadow:8px 8px 0 var(--ink);transform:rotate(2deg)}
+.logoimg{padding:0;overflow:hidden;border-style:solid}.logoimg img{width:100%;display:block}
+.two2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.split{display:grid;gap:16px;margin:26px 0}
+.bar{display:flex;gap:18px;align-items:center;border:var(--bw) solid var(--ink);border-radius:var(--r2);padding:18px 22px;box-shadow:var(--sh)}
+.bar b{font-family:var(--head);font-size:2.6rem}.b25{background:var(--c3)}.b75{background:var(--c2)}
+.path.four{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.path.flow{margin-top:34px}
+.give{background:var(--c2)}
 footer{padding:34px 0;text-align:center;font-weight:700;border-top:var(--bw) solid var(--ink);background:var(--bg)}
 @media(prefers-reduced-motion:reduce){.track,.machine{animation:none}}

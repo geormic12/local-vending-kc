@@ -40,7 +40,7 @@ const pages = {
     <p class="lead">Fresh, organic, Kansas City&#8209;made food and drink, in vending machines and a milk bar near you. Tap a letter to see what we stand for.</p>
     <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
   </div>
-  ${machine}
+  <img class="poster" src="lovekc.jpg" alt="LOVE KC neon logo made of vegetables and fruit inside a cooler" width="720" height="864">
 </div></section>
 ${marquee}
 <section><div class="wrap">
@@ -59,51 +59,86 @@ ${marquee}
     body: () => `
 <section class="hero small"><div class="wrap">
   <p class="eyebrow">The big picture</p><h1>Why this is a <span class="hl">great idea</span></h1>
-  <p class="lead">A closer look at the model behind Local Vending KC, and why it is built to grow.</p>
+  <p class="lead">A Makers Market, a vegan kitchen and an AI micro&#8209;market in one small space. Made local. Sold local. Available 24/7.</p>
 </div></section>
 ${marquee}
 <section><div class="wrap">
-  <h2 class="center">Six reasons it works</h2>
-  <div class="cards three">
-    <article class="pop p1"><div class="big">💰</div><h3>Many ways to earn</h3><p>One company, four income streams: vending, a retail milk bar, wholesale, and co&#8209;packing for other brands. If one is slow, the others carry it.</p></article>
-    <article class="pop p2"><div class="big">🏠</div><h3>Low overhead</h3><p>Machines and ready&#8209;made food need no dining room and no table service. The walk&#8209;up space has no seating, so costs stay lean.</p></article>
-    <article class="pop p3"><div class="big">🥗</div><h3>Demand for real food</h3><p>People want fresh, organic and local, not just chips and soda. Healthy options in a machine reach them at work, at home and on the go.</p></article>
-    <article class="pop p2"><div class="big">🌆</div><h3>A name that travels</h3><p>Each market adds its own city letters, <em>Local Vending (KC)</em>, so the same concept can open in new cities and still feel local.</p></article>
-    <article class="pop p3"><div class="big">🤝</div><h3>Hosts want it</h3><p>Property owners have already asked for the concept in their buildings, which means machines go where people already are.</p></article>
-    <article class="pop p1"><div class="big">🌱</div><h3>Stronger together</h3><p>Many brands under one roof share production, packaging and distribution. Each new brand makes the whole company stronger.</p></article>
+  <h2 class="center">The <span class="hl">problem</span> and the fix</h2>
+  <div class="cards two2">
+    <article class="pop p1"><div class="big">😕</div><h3>The problem</h3><p>Convenient food often costs us quality, freshness, local sourcing and variety. Traditional vending is built on nationally distributed packaged products, while local makers lack a way to reach customers beyond their own door.</p></article>
+    <article class="pop p3"><div class="big">💡</div><h3>The solution</h3><p>One compact space of about 750 sq ft that is a vegan kitchen, a local marketplace, a 24/7 store and a distribution hub. Local businesses reach shoppers without opening their own shop.</p></article>
   </div>
 </div></section>
 <section class="band"><div class="wrap">
-  <h2 class="center">The brands</h2>
-  <p class="center narrow">Heidi's family of more than five brands, made and co&#8209;packed in one place.</p>
+  <h2 class="center">The <span class="hl">Makers Market</span></h2>
+  <p class="center narrow">Shelves are split between our own products and the best of Kansas City.</p>
+  <div class="split">
+    <div class="bar b25"><b>25%</b><span>Local Vending KC products: vegan, health&#8209;conscious, made in our own kitchen. Sandwiches, waffles, breads, juices, herbal drinks, plant&#8209;based milks, desserts and ice cream.</span></div>
+    <div class="bar b75"><b>75%</b><span>Local makers: restaurant signature items, family&#8209;business snacks and baked goods, local artists and crafters, personal&#8209;care makers, and frozen treats.</span></div>
+  </div>
+  <p class="center narrow">A maker brings the product. We bring the shelf, the machine and the shoppers.</p>
+</div></section>
+<section><div class="wrap">
+  <h2 class="center">The AI <span class="hl">micro&#8209;market</span></h2>
+  <p class="center narrow">Open around the clock with card entry and AI&#8209;powered checkout. No cashier needed.</p>
+  <div class="path flow">
+    <div class="step"><b>1</b><h3>Enter</h3><p>Swipe a card to unlock the door.</p></div>
+    <div class="step"><b>2</b><h3>Select</h3><p>Grab items from shelves and coolers.</p></div>
+    <div class="step"><b>3</b><h3>AI sees</h3><p>Product recognition totals the purchase.</p></div>
+    <div class="step"><b>4</b><h3>Pay and go</h3><p>Cashless payment, then leave.</p></div>
+  </div>
+  <p class="center narrow">Behind the scenes: inventory tracking and alerts, sales reporting and remote monitoring.</p>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2 class="center">A network, not <span class="hl">one big factory</span></h2>
+  <p class="center narrow">Each 750&#8209;sq&#8209;ft hub makes about ten products really well and shares them across the network.</p>
   <div class="cards three">
-    <article class="pop p1"><div class="logo">${ph('Moloko Milk Bar logo')}</div><h3>Moloko Milk Bar</h3><p>A public milk bar: coolers of sandwiches, sides, fresh juices, fruit milks and herbal&#8209;infused milks, plus soft serve.</p></article>
-    <article class="pop p2"><div class="logo">${ph('LOVEKC logo')}</div><h3>Local Vending KC · FüD Factory</h3><p>The vending, wholesale and co&#8209;packing arm: sauces, milks and waffles for machines and retailers.</p></article>
-    <article class="pop p3"><div class="logo">${ph('More brands')}</div><h3>${ph('Other brand names')}</h3><p>${ph('Short description of the remaining brands')}</p></article>
+    <article class="pop p1"><div class="big">🚚</div><h3>Less travel</h3><p>Food is made close to where it is sold, so it arrives fresher.</p></article>
+    <article class="pop p2"><div class="big">🛡️</div><h3>Less risk</h3><p>A problem at one kitchen does not stop the whole network.</p></article>
+    <article class="pop p3"><div class="big">📈</div><h3>Easy to grow</h3><p>Every new location adds both a shop and more production capacity.</p></article>
   </div>
 </div></section>
 <section><div class="wrap">
-  <h2 class="center">What's on the shelf</h2>
+  <h2 class="center">Many ways to <span class="hl">earn</span></h2>
+  <div class="cards">
+    <article class="pop p1"><div class="big">🥗</div><h3>Our own products</h3><p>Sold in our markets, our machines, third&#8209;party placements and eventually grocery stores.</p></article>
+    <article class="pop p2"><div class="big">🧺</div><h3>Local marketplace</h3><p>Wholesale or revenue&#8209;share sales of local makers' goods.</p></article>
+    <article class="pop p3"><div class="big">🏨</div><h3>External machines</h3><p>Luxury apartments, hotels, airports and corporate properties.</p></article>
+    <article class="pop p1"><div class="big">🛒</div><h3>Wholesale</h3><p>Top sellers go to grocery, specialty markets, cafés, restaurants and institutions.</p></article>
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2 class="center">Who it's <span class="hl">for</span></h2>
   <div class="shelf">
-    <div class="item i0"><span>🥪</span>Sandwiches</div><div class="item i1"><span>🧃</span>Fresh juices</div>
-    <div class="item i2"><span>🍓</span>Fruit milks</div><div class="item i3"><span>🌿</span>Herbal milks</div>
-    <div class="item i4"><span>🍦</span>Soft serve &amp; pints</div><div class="item i0"><span>🧇</span>Waffles</div>
-    <div class="item i1"><span>🥖</span>Organic bread</div><div class="item i2"><span>🥫</span>Sauces</div>
+    <div class="item i0"><span>🏢</span>Apartment residents</div><div class="item i1"><span>🛎️</span>Hotel guests</div>
+    <div class="item i2"><span>✈️</span>Travelers</div><div class="item i3"><span>🏙️</span>Local shoppers</div>
+    <div class="item i4"><span>🏪</span>Grocery buyers</div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2 class="center">The <span class="hl">brands</span></h2>
+  <p class="center narrow">Heidi's family of more than five brands, made and co&#8209;packed in one place.</p>
+  <div class="cards three">
+    <article class="pop p1"><div class="logo">${ph('Moloko Milk Bar logo')}</div><h3>Moloko Milk Bar</h3><p>A public milk bar: coolers of sandwiches, sides, fresh juices, fruit milks and herbal&#8209;infused milks, plus soft serve.</p></article>
+    <article class="pop p2"><div class="logo logoimg"><img src="lovekc.jpg" alt="LOVE KC neon logo made of vegetables and fruit in a cooler"></div><h3>Local Vending KC · FüD Factory</h3><p>The vending, wholesale and co&#8209;packing arm: sauces, milks and waffles for machines and retailers.</p></article>
+    <article class="pop p3"><div class="logo">${ph('More brands')}</div><h3>${ph('Other brand names')}</h3><p>${ph('Short description of the remaining brands')}</p></article>
   </div>
 </div></section>
 <section class="band"><div class="wrap">
   <h2 class="center">A smart, <span class="hl">staged</span> rollout</h2>
-  <p class="center narrow">Each stage earns before the next one starts, so the risk stays small and the business grows from real sales.</p>
-<section><div class="wrap">
-  <h2 class="center">Our <span class="hl">roadmap</span></h2>
-  <div class="path">
-    <div class="step"><b>1</b><h3>Start</h3><p>New vending accounts in Kansas City coffee shops.</p></div>
-    <div class="step"><b>2</b><h3>Next</h3><p>A walk-up space for ready-made sandwiches, drinks and frozen pints. No seating.</p></div>
-    <div class="step"><b>3</b><h3>Then</h3><p>Making sauces, milks and waffles for wholesale and retail, sold in our machines too.</p></div>
+  <p class="center narrow">Each stage earns before the next one starts, so the risk stays small and growth comes from real sales.</p>
+  <div class="path four">
+    <div class="step"><b>1</b><h3>First market</h3><p>Kitchen, autonomous retail, first products and local maker partners.</p></div>
+    <div class="step"><b>2</b><h3>More machines</h3><p>Apartments, hotels, offices and busy spots, guided by sales data.</p></div>
+    <div class="step"><b>3</b><h3>More hubs</h3><p>New locations, each specializing in about ten products.</p></div>
+    <div class="step"><b>4</b><h3>Wholesale</h3><p>Best sellers move into grocery and other retail.</p></div>
   </div>
   <div class="sunday"><span>🍨</span><div><h3>Ice Cream Sunday</h3><p>Every week: fresh&#8209;baked organic bread, pizza, sandwiches, soft serve and all the toppings.</p></div></div>
 </div></section>
-<section class="cta"><div class="wrap center"><h2>Want a machine at your place?</h2><p>Host a machine, carry a brand or co&#8209;pack with us.</p><a class="btn" href="bio.html#contact">Say hello</a></div></section>`,
+<section><div class="wrap">
+  <div class="sunday give"><span>💛</span><div><h3>Doing good, too</h3><p>Local Vending KC was founded by single mothers, and plans to give 10% of taxable income to foundations that support single mothers and their children. Local businesses, local jobs, local products, local families.</p></div></div>
+</div></section>
+<section class="cta"><div class="wrap center"><h2>Made local. Sold local. Open 24/7.</h2><p>Host a machine, carry a brand or co&#8209;pack with us.</p><a class="btn" href="bio.html#contact">Say hello</a></div></section>`,
   },
   bio: {
     title: 'About Heidi',
@@ -209,6 +244,14 @@ section{padding:60px 0}.band{background:var(--band)}.cta{background:var(--a3)}
 .logo,.photo{background:#fff8;border:3px dashed var(--ink);display:grid;place-items:center;min-height:120px;border-radius:var(--r2);margin-bottom:14px;text-align:center}.photo{min-height:340px}
 .ticks{list-style:none;padding:0}.ticks li:before{content:"✔ ";color:var(--a1);font-weight:800}
 .ph{background:#ffe27a;color:#4a3b00;padding:0 4px;border-radius:3px;font-size:.92em}
+.poster{display:block;max-width:360px;width:100%;height:auto;margin:auto;border:var(--bw) solid var(--ink);border-radius:var(--r2);box-shadow:8px 8px 0 var(--ink);transform:rotate(2deg)}
+.logoimg{padding:0;overflow:hidden;border-style:solid}.logoimg img{width:100%;display:block}
+.two2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.split{display:grid;gap:16px;margin:26px 0}
+.bar{display:flex;gap:18px;align-items:center;border:var(--bw) solid var(--ink);border-radius:var(--r2);padding:18px 22px;box-shadow:var(--sh)}
+.bar b{font-family:var(--head);font-size:2.6rem}.b25{background:var(--c3)}.b75{background:var(--c2)}
+.path.four{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.path.flow{margin-top:34px}
+.give{background:var(--c2)}
 footer{padding:34px 0;text-align:center;font-weight:700;border-top:var(--bw) solid var(--ink);background:var(--bg)}
 @media(prefers-reduced-motion:reduce){.track,.machine{animation:none}}`;
 
