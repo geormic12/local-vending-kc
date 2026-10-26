@@ -38,7 +38,7 @@ const pages = {
     <h1>${v === 'a' ? 'Good food, <span class="hl">close to home</span>.' : 'Snack <span class="hl">local</span>. Feel <span class="hl2">good</span>.'}</h1>
     ${lovekc}
     <p class="lead">Fresh, organic, Kansas City&#8209;made food and drink, in vending machines and a milk bar near you. Tap a letter to see what we stand for.</p>
-    <p><a class="btn" href="brands.html">Meet the brands</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
+    <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
   </div>
   ${machine}
 </div></section>
@@ -52,7 +52,37 @@ ${marquee}
     <article class="pop p3"><div class="big">🥛</div><h3>Serve</h3><p>The Moloko Milk Bar: coolers of sandwiches, sides, fresh juices, fruit milks and herbal&#8209;infused milks.</p></article>
   </div>
 </div></section>
+<section class="cta"><div class="wrap center"><h2>Why does this work?</h2><p>The short version: many ways to earn, low overhead, and a brand that travels.</p><a class="btn" href="why.html">See the full picture</a> <a class="btn ghost" href="bio.html#contact">Contact Heidi</a></div></section>`,
+  },
+  why: {
+    title: 'Why Local Vending',
+    body: () => `
+<section class="hero small"><div class="wrap">
+  <p class="eyebrow">The big picture</p><h1>Why this is a <span class="hl">great idea</span></h1>
+  <p class="lead">A closer look at the model behind Local Vending KC, and why it is built to grow.</p>
+</div></section>
+${marquee}
+<section><div class="wrap">
+  <h2 class="center">Six reasons it works</h2>
+  <div class="cards three">
+    <article class="pop p1"><div class="big">💰</div><h3>Many ways to earn</h3><p>One company, four income streams: vending, a retail milk bar, wholesale, and co&#8209;packing for other brands. If one is slow, the others carry it.</p></article>
+    <article class="pop p2"><div class="big">🏠</div><h3>Low overhead</h3><p>Machines and ready&#8209;made food need no dining room and no table service. The walk&#8209;up space has no seating, so costs stay lean.</p></article>
+    <article class="pop p3"><div class="big">🥗</div><h3>Demand for real food</h3><p>People want fresh, organic and local, not just chips and soda. Healthy options in a machine reach them at work, at home and on the go.</p></article>
+    <article class="pop p2"><div class="big">🌆</div><h3>A name that travels</h3><p>Each market adds its own city letters, <em>Local Vending (KC)</em>, so the same concept can open in new cities and still feel local.</p></article>
+    <article class="pop p3"><div class="big">🤝</div><h3>Hosts want it</h3><p>Property owners have already asked for the concept in their buildings, which means machines go where people already are.</p></article>
+    <article class="pop p1"><div class="big">🌱</div><h3>Stronger together</h3><p>Many brands under one roof share production, packaging and distribution. Each new brand makes the whole company stronger.</p></article>
+  </div>
+</div></section>
 <section class="band"><div class="wrap">
+  <h2 class="center">The brands</h2>
+  <p class="center narrow">Heidi's family of more than five brands, made and co&#8209;packed in one place.</p>
+  <div class="cards three">
+    <article class="pop p1"><div class="logo">${ph('Moloko Milk Bar logo')}</div><h3>Moloko Milk Bar</h3><p>A public milk bar: coolers of sandwiches, sides, fresh juices, fruit milks and herbal&#8209;infused milks, plus soft serve.</p></article>
+    <article class="pop p2"><div class="logo">${ph('LOVEKC logo')}</div><h3>Local Vending KC · FüD Factory</h3><p>The vending, wholesale and co&#8209;packing arm: sauces, milks and waffles for machines and retailers.</p></article>
+    <article class="pop p3"><div class="logo">${ph('More brands')}</div><h3>${ph('Other brand names')}</h3><p>${ph('Short description of the remaining brands')}</p></article>
+  </div>
+</div></section>
+<section><div class="wrap">
   <h2 class="center">What's on the shelf</h2>
   <div class="shelf">
     <div class="item i0"><span>🥪</span>Sandwiches</div><div class="item i1"><span>🧃</span>Fresh juices</div>
@@ -61,6 +91,9 @@ ${marquee}
     <div class="item i1"><span>🥖</span>Organic bread</div><div class="item i2"><span>🥫</span>Sauces</div>
   </div>
 </div></section>
+<section class="band"><div class="wrap">
+  <h2 class="center">A smart, <span class="hl">staged</span> rollout</h2>
+  <p class="center narrow">Each stage earns before the next one starts, so the risk stays small and the business grows from real sales.</p>
 <section><div class="wrap">
   <h2 class="center">Our <span class="hl">roadmap</span></h2>
   <div class="path">
@@ -199,7 +232,8 @@ h1{text-transform:uppercase;letter-spacing:-.02em}.eyebrow{text-transform:upperc
   },
 };
 
-const nav = [['index', 'Home'], ['bio', 'About Heidi'], ['brands', 'Brands']];
+delete pages.brands; // brands now live inside the "why" page
+const nav = [['index', 'Home'], ['bio', 'About Heidi'], ['why', 'Why It Works']];
 for (const v of ['a', 'b']) {
   mkdirSync(`${out}/${v}`, { recursive: true });
   writeFileSync(`${out}/${v}/style.css`, themes[v].css + base);
@@ -214,6 +248,6 @@ for (const v of ['a', 'b']) {
 }
 writeFileSync(`${out}/index.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local Vending KC: Site Options</title>
 <style>body{font-family:system-ui;max-width:680px;margin:60px auto;padding:0 20px;line-height:1.6;background:#fffdf5}h1{font-size:2.2rem}a.c{display:block;padding:22px;border:3px solid #222;border-radius:18px;margin:18px 0;text-decoration:none;color:#222;box-shadow:5px 5px 0 #222;transition:transform .15s}a.c:hover{transform:translate(-3px,-3px)}.a{background:#ffe48a}.b{background:#ff9fd2}mark{background:#ffe27a;padding:0 4px}</style></head><body>
-<h1>Local Vending KC: two design options</h1><p>Each option has three pages: Home, About Heidi, and Brands. <mark>Yellow</mark> text marks content still to be filled in.</p>
+<h1>Local Vending KC: two design options</h1><p>Each option has three pages: a short intro, About Heidi (with contact), and Why It Works. <mark>Yellow</mark> text marks content still to be filled in.</p>
 <a class="c a" href="a/index.html"><strong>Option A: Sunny Market</strong><br>Warm cream, tomato red and leaf green. Rounded, friendly, farmers-market feel.</a>
 <a class="c b" href="b/index.html"><strong>Option B: Pop Mini-Mart</strong><br>Hot pink, lime and mint with chunky offset shadows. Loud, fun, snack-aisle feel.</a></body></html>`);
