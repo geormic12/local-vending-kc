@@ -1,4 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local Vending KC: Site Options</title><style>html.locked body>*:not(#gate){display:none!important}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local Vending KC | Local Vending KC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>html.locked body>*:not(#gate){display:none!important}
 #gate,#gate *{box-sizing:border-box}
 #gate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;background:#fff8e7;font-family:system-ui,sans-serif;color:#2a2118;z-index:99}
 #gate form{background:#fff;border:3px solid #2a2118;border-radius:22px;box-shadow:6px 6px 0 #2a2118;padding:32px 28px;width:100%;max-width:360px;text-align:center}
@@ -12,8 +13,28 @@ document.documentElement.classList.add('locked');
 document.addEventListener('DOMContentLoaded',function(){var g=document.createElement('div');g.id='gate';
 g.innerHTML='<form><h1>Local Vending KC</h1><p>This preview is private. Enter the password to continue.</p><input type="password" placeholder="Password" autocomplete="off" aria-label="Password" autofocus><div class="err" role="alert"></div><button type="submit">Enter</button></form>';
 document.body.appendChild(g);var f=g.querySelector('form'),i=g.querySelector('input');
-f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toLowerCase()==='lovekc'){try{localStorage.setItem(K,'1')}catch(x){}document.documentElement.classList.remove('locked');g.remove()}else{g.querySelector('.err').textContent='Not quite, try again.';i.value='';i.focus()}});i.focus()})})();</script>
-<style>body{font-family:system-ui;max-width:680px;margin:60px auto;padding:0 20px;line-height:1.6;background:#fffdf5}h1{font-size:2.2rem}a.c{display:block;padding:22px;border:3px solid #222;border-radius:18px;margin:18px 0;text-decoration:none;color:#222;box-shadow:5px 5px 0 #222;transition:transform .15s}a.c:hover{transform:translate(-3px,-3px)}.a{background:#ffe48a}.b{background:#ff9fd2}mark{background:#ffe27a;padding:0 4px}</style></head><body>
-<h1>Local Vending KC: two design options</h1><p>Each option has three pages: a short intro, About Heidi (with contact), and Why It Works. <mark>Yellow</mark> text marks content still to be filled in.</p>
-<a class="c a" href="a/index.html"><strong>Option A: Sunny Market</strong><br>Warm cream, tomato red and leaf green. Rounded, friendly, farmers-market feel.</a>
-<a class="c b" href="b/index.html"><strong>Option B: Pop Mini-Mart</strong><br>Hot pink, lime and mint with chunky offset shadows. Loud, fun, snack-aisle feel.</a></body></html>
+f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toLowerCase()==='lovekc'){try{localStorage.setItem(K,'1')}catch(x){}document.documentElement.classList.remove('locked');g.remove()}else{g.querySelector('.err').textContent='Not quite, try again.';i.value='';i.focus()}});i.focus()})})();</script></head><body>
+<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav><a href="index.html" class="on">Home</a><a href="bio.html">About Heidi</a><a href="why.html">Why It Works</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap heroGrid">
+  <div>
+    <p class="eyebrow">Kansas City's friendliest mini-market</p>
+    <h1>Snack <span class="hl">local</span>. Feel <span class="hl2">good</span>.</h1>
+    <div class="lovekc" aria-label="LOVE KC"><button type="button" class="ltr c0"><span class="l">L</span><span class="tip">Local, Fresh, Better Together</span></button><button type="button" class="ltr c1"><span class="l">O</span><span class="tip">Good Food, Brighter KC</span></button><button type="button" class="ltr c2"><span class="l">V</span><span class="tip">Organic, Local, Delicious</span></button><button type="button" class="ltr c3"><span class="l">E</span><span class="tip">Fuel a Kinder KC</span></button><button type="button" class="ltr c4"><span class="l">K</span><span class="tip">Kansas City Grown</span></button><button type="button" class="ltr c5"><span class="l">C</span><span class="tip">Healthier Community, Happier KC</span></button></div>
+    <p class="lead">Fresh, organic, Kansas City&#8209;made food and drink, in vending machines and a milk bar near you. Tap a letter to see what we stand for.</p>
+    <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
+  </div>
+  <img class="poster" src="lovekc.jpg" alt="LOVE KC neon logo made of vegetables and fruit inside a cooler" width="720" height="864">
+</div></section>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Local</span><span class="dot">✺</span><span>Fresh</span><span class="dot">✺</span><span>Organic</span><span class="dot">✺</span><span>Kansas City Grown</span><span class="dot">✺</span><span>Milk Bar</span><span class="dot">✺</span><span>Soft Serve</span><span class="dot">✺</span><span>Better Together</span><span class="dot">✺</span><span>Healthy Snacks</span><span class="dot">✺</span><span>Local</span><span class="dot">✺</span><span>Fresh</span><span class="dot">✺</span><span>Organic</span><span class="dot">✺</span><span>Kansas City Grown</span><span class="dot">✺</span><span>Milk Bar</span><span class="dot">✺</span><span>Soft Serve</span><span class="dot">✺</span><span>Better Together</span><span class="dot">✺</span><span>Healthy Snacks</span><span class="dot">✺</span></div></div>
+<section><div class="wrap">
+  <h2 class="center">What is <span class="hl">Local Vending</span>?</h2>
+  <p class="center narrow">Local Vending KC is a vendor, retailer, wholesaler and co-packer. We make and distribute a family of more than five food and drink brands, then put them where Kansas City already is. Every market gets its own city letters, <em>Local Vending (KC)</em>, so it is always truly local.</p>
+  <div class="cards">
+    <article class="pop p1"><div class="big">🥗</div><h3>Vend</h3><p>Fresh ready&#8209;made food and drinks in machines at coffee shops, luxury apartments and other prime spots.</p></article>
+    <article class="pop p2"><div class="big">🧇</div><h3>Make</h3><p>Sauces, milks and waffles produced for wholesale and retail, and co&#8209;packed for our brands.</p></article>
+    <article class="pop p3"><div class="big">🥛</div><h3>Serve</h3><p>The Moloko Milk Bar: coolers of sandwiches, sides, fresh juices, fruit milks and herbal&#8209;infused milks.</p></article>
+  </div>
+</div></section>
+<section class="cta"><div class="wrap center"><h2>Why does this work?</h2><p>The short version: many ways to earn, low overhead, and a brand that travels.</p><a class="btn" href="why.html">See the full picture</a> <a class="btn ghost" href="bio.html#contact">Contact Heidi</a></div></section></main>
+<footer><div class="wrap">© Local Vending KC · Kansas City, MO · Draft for review</div></footer></body></html>

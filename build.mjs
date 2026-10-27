@@ -293,20 +293,18 @@ f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toL
 
 delete pages.brands; // brands now live inside the "why" page
 const nav = [['index', 'Home'], ['bio', 'About Heidi'], ['why', 'Why It Works']];
-for (const v of ['a', 'b']) {
-  mkdirSync(`${out}/${v}`, { recursive: true });
-  writeFileSync(`${out}/${v}/style.css`, themes[v].css + base);
+for (const v of ['b']) { // only option B is published, at the site root
+  mkdirSync(out, { recursive: true });
+  writeFileSync(`${out}/style.css`, themes[v].css + base);
   for (const [key, p] of Object.entries(pages)) {
     const links = nav.map(([k, l]) => `<a href="${k}.html"${k === key ? ' class="on"' : ''}>${l}</a>`).join('');
-    writeFileSync(`${out}/${v}/${key}.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${p.title} | Local Vending KC</title>
+    writeFileSync(`${out}/${key}.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${p.title} | Local Vending KC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=${themes[v].font}&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">${gate}</head><body>
 <header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav>${links}</nav></div></header>
 <main>${p.body(v)}</main>
 <footer><div class="wrap">© Local Vending KC · Kansas City, MO · Draft for review</div></footer></body></html>`);
   }
 }
-writeFileSync(`${out}/index.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local Vending KC: Site Options</title>${gate}
-<style>body{font-family:system-ui;max-width:680px;margin:60px auto;padding:0 20px;line-height:1.6;background:#fffdf5}h1{font-size:2.2rem}a.c{display:block;padding:22px;border:3px solid #222;border-radius:18px;margin:18px 0;text-decoration:none;color:#222;box-shadow:5px 5px 0 #222;transition:transform .15s}a.c:hover{transform:translate(-3px,-3px)}.a{background:#ffe48a}.b{background:#ff9fd2}mark{background:#ffe27a;padding:0 4px}</style></head><body>
-<h1>Local Vending KC: two design options</h1><p>Each option has three pages: a short intro, About Heidi (with contact), and Why It Works. <mark>Yellow</mark> text marks content still to be filled in.</p>
-<a class="c a" href="a/index.html"><strong>Option A: Sunny Market</strong><br>Warm cream, tomato red and leaf green. Rounded, friendly, farmers-market feel.</a>
-<a class="c b" href="b/index.html"><strong>Option B: Pop Mini-Mart</strong><br>Hot pink, lime and mint with chunky offset shadows. Loud, fun, snack-aisle feel.</a></body></html>`);
+mkdirSync(`${out}/b`, { recursive: true });
+// old /b/ links keep working
+for (const k of Object.keys(pages)) writeFileSync(`${out}/b/${k}.html`, `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=../${k}.html"><link rel="canonical" href="../${k}.html"><a href="../${k}.html">Continue</a>`);
