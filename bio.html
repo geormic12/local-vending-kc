@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(){var g=document.createEle
 g.innerHTML='<form><h1>Local Vending KC</h1><p>This preview is private. Enter the password to continue.</p><input type="password" placeholder="Password" autocomplete="off" aria-label="Password" autofocus><div class="err" role="alert"></div><button type="submit">Enter</button></form>';
 document.body.appendChild(g);var f=g.querySelector('form'),i=g.querySelector('input');
 f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toLowerCase()==='lovekc'){try{localStorage.setItem(K,'1')}catch(x){}document.documentElement.classList.remove('locked');g.remove()}else{g.querySelector('.err').textContent='Not quite, try again.';i.value='';i.focus()}});i.focus()})})();</script></head><body>
-<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav><a href="index.html">Home</a><a href="bio.html" class="on">About Heidi</a><a href="why.html">Why It Works</a></nav></div></header>
+<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav><a href="index.html">Home</a><a href="visit.html">Visit & Events</a><a href="bio.html" class="on">About Heidi</a><a href="why.html">Why It Works</a></nav></div></header>
 <main>
 <section class="hero small"><div class="wrap">
   <p class="eyebrow">Meet the founder</p><h1>Heidi <span class="hl">Van Pelt</span></h1>

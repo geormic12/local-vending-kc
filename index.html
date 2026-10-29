@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(){var g=document.createEle
 g.innerHTML='<form><h1>Local Vending KC</h1><p>This preview is private. Enter the password to continue.</p><input type="password" placeholder="Password" autocomplete="off" aria-label="Password" autofocus><div class="err" role="alert"></div><button type="submit">Enter</button></form>';
 document.body.appendChild(g);var f=g.querySelector('form'),i=g.querySelector('input');
 f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toLowerCase()==='lovekc'){try{localStorage.setItem(K,'1')}catch(x){}document.documentElement.classList.remove('locked');g.remove()}else{g.querySelector('.err').textContent='Not quite, try again.';i.value='';i.focus()}});i.focus()})})();</script></head><body>
-<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav><a href="index.html" class="on">Home</a><a href="bio.html">About Heidi</a><a href="why.html">Why It Works</a></nav></div></header>
+<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav><a href="index.html" class="on">Home</a><a href="visit.html">Visit & Events</a><a href="bio.html">About Heidi</a><a href="why.html">Why It Works</a></nav></div></header>
 <main>
 <section class="hero"><div class="wrap heroGrid">
   <div>
@@ -22,7 +22,7 @@ f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toL
     <h1>Snack <span class="hl">local</span>. Feel <span class="hl2">good</span>.</h1>
     <div class="lovekc" aria-label="LOVE KC"><button type="button" class="ltr c0"><span class="l">L</span><span class="tip">Local, Fresh, Better Together</span></button><button type="button" class="ltr c1"><span class="l">O</span><span class="tip">Good Food, Brighter KC</span></button><button type="button" class="ltr c2"><span class="l">V</span><span class="tip">Organic, Local, Delicious</span></button><button type="button" class="ltr c3"><span class="l">E</span><span class="tip">Fuel a Kinder KC</span></button><button type="button" class="ltr c4"><span class="l">K</span><span class="tip">Kansas City Grown</span></button><button type="button" class="ltr c5"><span class="l">C</span><span class="tip">Healthier Community, Happier KC</span></button></div>
     <p class="lead">Fresh, organic, Kansas City&#8209;made food and drink, in vending machines and a milk bar near you. Tap a letter to see what we stand for.</p>
-    <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
+    <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="visit.html">Visit and events</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
   </div>
   <img class="poster" src="lovekc.jpg" alt="LOVE KC neon logo made of vegetables and fruit inside a cooler" width="720" height="864">
 </div></section>

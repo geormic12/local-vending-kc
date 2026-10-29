@@ -34,7 +34,7 @@ section{padding:60px 0}.band{background:var(--band)}.cta{background:var(--a3)}
 .step{position:relative;background:var(--card);border:var(--bw) solid var(--ink);border-radius:var(--r2);padding:26px 22px 22px;box-shadow:var(--sh)}
 .step b{position:absolute;top:-18px;left:18px;width:40px;height:40px;border-radius:50%;background:var(--a1);color:var(--btnink);border:var(--bw) solid var(--ink);display:grid;place-items:center;font-size:1.2rem}
 .sunday{display:flex;gap:18px;align-items:center;background:var(--c3);border:var(--bw) solid var(--ink);border-radius:var(--r2);padding:20px 26px;box-shadow:var(--sh)}
-.sunday span{font-size:3.4rem}.sunday h3{margin:0}.sunday p{margin:.2em 0 0}
+.sunday{margin-top:26px}.sunday span{font-size:3.4rem}.sunday h3{margin:0}.sunday p{margin:.2em 0 0}
 .marquee{overflow:hidden;background:var(--ink);color:var(--bg);border-block:var(--bw) solid var(--ink);padding:10px 0;white-space:nowrap;font-family:var(--head);font-weight:700;font-size:1.2rem}
 .track{display:inline-block;animation:slide 30s linear infinite}.marquee span{margin:0 14px}.dot{color:var(--a2)}
 @keyframes slide{to{transform:translateX(-50%)}}

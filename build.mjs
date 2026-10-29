@@ -38,7 +38,7 @@ const pages = {
     <h1>${v === 'a' ? 'Good food, <span class="hl">close to home</span>.' : 'Snack <span class="hl">local</span>. Feel <span class="hl2">good</span>.'}</h1>
     ${lovekc}
     <p class="lead">Fresh, organic, Kansas City&#8209;made food and drink, in vending machines and a milk bar near you. Tap a letter to see what we stand for.</p>
-    <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
+    <p><a class="btn" href="why.html">Why it works</a> <a class="btn ghost" href="visit.html">Visit and events</a> <a class="btn ghost" href="bio.html#contact">Host a machine</a></p>
   </div>
   <img class="poster" src="lovekc.jpg" alt="LOVE KC neon logo made of vegetables and fruit inside a cooler" width="720" height="864">
 </div></section>
@@ -168,6 +168,53 @@ ${marquee}
   </div>
 </div></section>`,
   },
+  visit: {
+    title: 'Visit & Events',
+    body: () => `
+<section class="hero small"><div class="wrap">
+  <p class="eyebrow">Come on in</p><h1>Visit <span class="hl">Moloko Milk Bar</span></h1>
+  <p class="lead">A makers micro&#8209;market inside the Local Vending KC space, with everything we make on the shelves.</p>
+</div></section>
+${marquee}
+<section><div class="wrap">
+  <h2 class="center">Find <span class="hl">us</span></h2>
+  <div class="cards">
+    <article class="pop p1"><div class="big">📍</div><h3>Location</h3><p>Local Vending KC<br>333 Southwest Boulevard<br>Kansas City, MO 64108</p><p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=333+Southwest+Boulevard+Kansas+City+MO+64108" target="_blank" rel="noopener">Open in Maps</a></p></article>
+    <article class="pop p2"><div class="big">🕙</div><h3>Milk bar hours</h3><p><b>Friday, Saturday and Sunday</b><br>10am to 3pm</p><p>Counter service: soft serve, frozen shakes and fresh milks, poured by a real person.</p></article>
+    <article class="pop p3"><div class="big">🌙</div><h3>Open 24/7</h3><p>When the counter is closed, the foyer vending machine is still on. Swipe a credit card to come in.</p></article>
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2 class="center">What's <span class="hl">inside</span></h2>
+  <p class="center narrow">Moloko Milk Bar makes infused plant milks and ice creams, and it is the front door to everything Local Vending KC produces.</p>
+  <div class="cards">
+    <article class="pop p1"><div class="big">🍦</div><h3>Soft serve</h3><p>Served at the counter during milk bar hours.</p></article>
+    <article class="pop p2"><div class="big">🥤</div><h3>Shakes</h3><p>Frozen drink machine shakes, made to order.</p></article>
+    <article class="pop p3"><div class="big">🥛</div><h3>Milk dispensary</h3><p>Infused plant milks, poured fresh.</p></article>
+    <article class="pop p1"><div class="big">🥪</div><h3>Vending market</h3><p>Sandwiches, sides, snacks, artisan gifts and whatever we find that is about to trend.</p></article>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2 class="center">After hours, <span class="hl">the foyer</span></h2>
+  <div class="path">
+    <div class="step"><b>1</b><h3>Swipe</h3><p>A valid credit card unlocks the front door.</p></div>
+    <div class="step"><b>2</b><h3>Step in</h3><p>The foyer holds two people at a time.</p></div>
+    <div class="step"><b>3</b><h3>Close the door</h3><p>Privacy and protection while you choose.</p></div>
+    <div class="step"><b>4</b><h3>Pick and pay</h3><p>Choose from the machine and go.</p></div>
+  </div>
+</div></section>
+<section class="band" id="events"><div class="wrap">
+  <h2 class="center">Night <span class="hl">Milk</span></h2>
+  <p class="center narrow">Special events at Moloko Milk Bar happen in the evenings. The lights change, the ambiance shifts, and the space becomes a night setting for entertainment.</p>
+  <div class="cards">
+    <article class="pop p1"><div class="big">🎶</div><h3>Musical artists</h3><p>Local musicians as our guests.</p></article>
+    <article class="pop p2"><div class="big">🎨</div><h3>Visual artists</h3><p>Work from Kansas City artists on display.</p></article>
+    <article class="pop p3"><div class="big">🎭</div><h3>Performance artists</h3><p>Performers from the community.</p></article>
+  </div>
+  <div class="sunday"><span>🗓️</span><div><h3>Upcoming Night Milk dates</h3><p>${ph('Add dates, times and featured artists')}</p></div></div>
+</div></section>
+<section class="cta"><div class="wrap center"><h2>Want to perform or show your work?</h2><p>Night Milk features guests from the community.</p><a class="btn" href="bio.html#contact">Get in touch</a></div></section>`,
+  },
   brands: {
     title: 'Our Brands',
     body: () => `
@@ -220,7 +267,7 @@ section{padding:60px 0}.band{background:var(--band)}.cta{background:var(--a3)}
 .step{position:relative;background:var(--card);border:var(--bw) solid var(--ink);border-radius:var(--r2);padding:26px 22px 22px;box-shadow:var(--sh)}
 .step b{position:absolute;top:-18px;left:18px;width:40px;height:40px;border-radius:50%;background:var(--a1);color:var(--btnink);border:var(--bw) solid var(--ink);display:grid;place-items:center;font-size:1.2rem}
 .sunday{display:flex;gap:18px;align-items:center;background:var(--c3);border:var(--bw) solid var(--ink);border-radius:var(--r2);padding:20px 26px;box-shadow:var(--sh)}
-.sunday span{font-size:3.4rem}.sunday h3{margin:0}.sunday p{margin:.2em 0 0}
+.sunday{margin-top:26px}.sunday span{font-size:3.4rem}.sunday h3{margin:0}.sunday p{margin:.2em 0 0}
 .marquee{overflow:hidden;background:var(--ink);color:var(--bg);border-block:var(--bw) solid var(--ink);padding:10px 0;white-space:nowrap;font-family:var(--head);font-weight:700;font-size:1.2rem}
 .track{display:inline-block;animation:slide 30s linear infinite}.marquee span{margin:0 14px}.dot{color:var(--a2)}
 @keyframes slide{to{transform:translateX(-50%)}}
@@ -292,7 +339,7 @@ document.body.appendChild(g);var f=g.querySelector('form'),i=g.querySelector('in
 f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toLowerCase()==='lovekc'){try{localStorage.setItem(K,'1')}catch(x){}document.documentElement.classList.remove('locked');g.remove()}else{g.querySelector('.err').textContent='Not quite, try again.';i.value='';i.focus()}});i.focus()})})();</script>`;
 
 delete pages.brands; // brands now live inside the "why" page
-const nav = [['index', 'Home'], ['bio', 'About Heidi'], ['why', 'Why It Works']];
+const nav = [['index', 'Home'], ['visit', 'Visit & Events'], ['bio', 'About Heidi'], ['why', 'Why It Works']];
 for (const v of ['b']) { // only option B is published, at the site root
   mkdirSync(out, { recursive: true });
   writeFileSync(`${out}/style.css`, themes[v].css + base);

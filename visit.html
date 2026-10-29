@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Visit & Events | Local Vending KC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>html.locked body>*:not(#gate){display:none!important}
+#gate,#gate *{box-sizing:border-box}
+#gate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;background:#fff8e7;font-family:system-ui,sans-serif;color:#2a2118;z-index:99}
+#gate form{background:#fff;border:3px solid #2a2118;border-radius:22px;box-shadow:6px 6px 0 #2a2118;padding:32px 28px;width:100%;max-width:360px;text-align:center}
+#gate h1{font-size:1.6rem;line-height:1.2;margin:0 0 10px}
+#gate p{margin:0 0 20px;line-height:1.5}
+#gate input{display:block;font:inherit;padding:12px 16px;border:3px solid #2a2118;border-radius:99px;width:100%;margin:0 0 8px;text-align:center}
+#gate .err{color:#c00;min-height:1.4em;margin:0 0 12px;font-size:.9rem}
+#gate button{font:inherit;font-weight:800;padding:12px 32px;border:3px solid #2a2118;border-radius:99px;background:#e8472f;color:#fff;cursor:pointer}</style>
+<script>(function(){var K='lvkc-ok';try{if(localStorage.getItem(K)==='1')return}catch(e){}
+document.documentElement.classList.add('locked');
+document.addEventListener('DOMContentLoaded',function(){var g=document.createElement('div');g.id='gate';
+g.innerHTML='<form><h1>Local Vending KC</h1><p>This preview is private. Enter the password to continue.</p><input type="password" placeholder="Password" autocomplete="off" aria-label="Password" autofocus><div class="err" role="alert"></div><button type="submit">Enter</button></form>';
+document.body.appendChild(g);var f=g.querySelector('form'),i=g.querySelector('input');
+f.addEventListener('submit',function(e){e.preventDefault();if(i.value.trim().toLowerCase()==='lovekc'){try{localStorage.setItem(K,'1')}catch(x){}document.documentElement.classList.remove('locked');g.remove()}else{g.querySelector('.err').textContent='Not quite, try again.';i.value='';i.focus()}});i.focus()})})();</script></head><body>
+<header><div class="wrap"><a class="logoT" href="index.html"><b>Lo</b>cal <b>Ve</b>nding <b>KC</b></a><nav><a href="index.html">Home</a><a href="visit.html" class="on">Visit & Events</a><a href="bio.html">About Heidi</a><a href="why.html">Why It Works</a></nav></div></header>
+<main>
+<section class="hero small"><div class="wrap">
+  <p class="eyebrow">Come on in</p><h1>Visit <span class="hl">Moloko Milk Bar</span></h1>
+  <p class="lead">A makers micro&#8209;market inside the Local Vending KC space, with everything we make on the shelves.</p>
+</div></section>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Local</span><span class="dot">✺</span><span>Fresh</span><span class="dot">✺</span><span>Organic</span><span class="dot">✺</span><span>Kansas City Grown</span><span class="dot">✺</span><span>Milk Bar</span><span class="dot">✺</span><span>Soft Serve</span><span class="dot">✺</span><span>Better Together</span><span class="dot">✺</span><span>Healthy Snacks</span><span class="dot">✺</span><span>Local</span><span class="dot">✺</span><span>Fresh</span><span class="dot">✺</span><span>Organic</span><span class="dot">✺</span><span>Kansas City Grown</span><span class="dot">✺</span><span>Milk Bar</span><span class="dot">✺</span><span>Soft Serve</span><span class="dot">✺</span><span>Better Together</span><span class="dot">✺</span><span>Healthy Snacks</span><span class="dot">✺</span></div></div>
+<section><div class="wrap">
+  <h2 class="center">Find <span class="hl">us</span></h2>
+  <div class="cards">
+    <article class="pop p1"><div class="big">📍</div><h3>Location</h3><p>Local Vending KC<br>333 Southwest Boulevard<br>Kansas City, MO 64108</p><p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=333+Southwest+Boulevard+Kansas+City+MO+64108" target="_blank" rel="noopener">Open in Maps</a></p></article>
+    <article class="pop p2"><div class="big">🕙</div><h3>Milk bar hours</h3><p><b>Friday, Saturday and Sunday</b><br>10am to 3pm</p><p>Counter service: soft serve, frozen shakes and fresh milks, poured by a real person.</p></article>
+    <article class="pop p3"><div class="big">🌙</div><h3>Open 24/7</h3><p>When the counter is closed, the foyer vending machine is still on. Swipe a credit card to come in.</p></article>
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2 class="center">What's <span class="hl">inside</span></h2>
+  <p class="center narrow">Moloko Milk Bar makes infused plant milks and ice creams, and it is the front door to everything Local Vending KC produces.</p>
+  <div class="cards">
+    <article class="pop p1"><div class="big">🍦</div><h3>Soft serve</h3><p>Served at the counter during milk bar hours.</p></article>
+    <article class="pop p2"><div class="big">🥤</div><h3>Shakes</h3><p>Frozen drink machine shakes, made to order.</p></article>
+    <article class="pop p3"><div class="big">🥛</div><h3>Milk dispensary</h3><p>Infused plant milks, poured fresh.</p></article>
+    <article class="pop p1"><div class="big">🥪</div><h3>Vending market</h3><p>Sandwiches, sides, snacks, artisan gifts and whatever we find that is about to trend.</p></article>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2 class="center">After hours, <span class="hl">the foyer</span></h2>
+  <div class="path">
+    <div class="step"><b>1</b><h3>Swipe</h3><p>A valid credit card unlocks the front door.</p></div>
+    <div class="step"><b>2</b><h3>Step in</h3><p>The foyer holds two people at a time.</p></div>
+    <div class="step"><b>3</b><h3>Close the door</h3><p>Privacy and protection while you choose.</p></div>
+    <div class="step"><b>4</b><h3>Pick and pay</h3><p>Choose from the machine and go.</p></div>
+  </div>
+</div></section>
+<section class="band" id="events"><div class="wrap">
+  <h2 class="center">Night <span class="hl">Milk</span></h2>
+  <p class="center narrow">Special events at Moloko Milk Bar happen in the evenings. The lights change, the ambiance shifts, and the space becomes a night setting for entertainment.</p>
+  <div class="cards">
+    <article class="pop p1"><div class="big">🎶</div><h3>Musical artists</h3><p>Local musicians as our guests.</p></article>
+    <article class="pop p2"><div class="big">🎨</div><h3>Visual artists</h3><p>Work from Kansas City artists on display.</p></article>
+    <article class="pop p3"><div class="big">🎭</div><h3>Performance artists</h3><p>Performers from the community.</p></article>
+  </div>
+  <div class="sunday"><span>🗓️</span><div><h3>Upcoming Night Milk dates</h3><p><mark class="ph">[Add dates, times and featured artists]</mark></p></div></div>
+</div></section>
+<section class="cta"><div class="wrap center"><h2>Want to perform or show your work?</h2><p>Night Milk features guests from the community.</p><a class="btn" href="bio.html#contact">Get in touch</a></div></section></main>
+<footer><div class="wrap">© Local Vending KC · Kansas City, MO · Draft for review</div></footer></body></html>
